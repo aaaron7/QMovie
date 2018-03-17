@@ -23,6 +23,13 @@ class MovieListViewController: UIViewController {
     
     func setupViews(){
         view.backgroundColor = .white
+        view.addSubview(screenListView)
+        view.addSubview(movieListView)
+        
+        movieListView.snp.makeConstraints { (cm) in
+            cm.height.equalTo(200)
+            cm.top.width.equalTo(self.view)
+        }
     }
 
     lazy var screenListView : ScreenListView = {
@@ -37,6 +44,7 @@ class MovieListViewController: UIViewController {
     
     lazy var movieListView : MovieListView = {
         let view = MovieListView()
+        view.backgroundColor = UIColor.blue
         return view
     }()
     

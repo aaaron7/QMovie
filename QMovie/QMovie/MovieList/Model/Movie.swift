@@ -8,11 +8,13 @@
 
 import Foundation
 
-struct Movie{
+struct Movie : Codable{
     let objectId : String
     let category : String
     let imbdId : String
     let director : String
     let name : String
     let poster : String
+    let createdAt : String
+    let updatedAt : String
 }

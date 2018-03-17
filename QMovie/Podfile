@@ -6,4 +6,5 @@ pod 'IQKeyboardManagerSwift', :git => 'https://github.com/hackiftekhar/IQKeyboar
 pod 'BEMCheckBox', :git => 'https://github.com/Boris-Em/BEMCheckBox.git', :tag => '1.4.0'
 pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :tag => 'v3.5'
 pod 'SnapKit', :git=>'https://github.com/SnapKit/SnapKit.git', :tag=> '4.0.0'
+pod 'SwiftyJSON', :git=>'https://github.com/SwiftyJSON/SwiftyJSON.git', :tag=> '4.0.0'
 end

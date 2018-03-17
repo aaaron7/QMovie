@@ -14,3 +14,11 @@ func dateString(from fromDate : Date) -> String{
     let dateString = dateF.string(from: fromDate)
     return dateString
 }
+
+func utcStringDate(from : String)->Date{
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"
+    dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+    let date = dateFormatter.date(from: from)
+    return date!
+}

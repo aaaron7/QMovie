@@ -8,8 +8,18 @@
 
 import UIKit
 
-class MovieListView: UIView {
+protocol MovieListViewDataSource {
+    func registerMoviesToday() -> [RegisterMovie]
+}
 
+class MovieListView: UIView, UICollectionViewDataSource, UICollectionViewDelegate{
+
+    var dataSource : MovieListViewDataSource?
+    
+    lazy var contentView : UICollectionView = {
+        let view = UICollectionView()
+        return view
+    }()
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -17,5 +27,20 @@ class MovieListView: UIView {
         // Drawing code
     }
     */
+}
 
+extension MovieListView{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let delegate = dataSource{
+            return delegate.registerMoviesToday().count
+        }else{
+            return 0
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+    }
+    
+    
 }

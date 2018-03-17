@@ -16,6 +16,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         setupViews()
+        
+        let service = MovieListService()
+        service.getTodayRegisterMoviesInfo { (movies, error) in
+            
+        }
     }
     
     func setupViews(){
@@ -26,17 +31,17 @@ class ViewController: UIViewController {
             make.center.equalTo(view)
         }
         
-        let today = Date()
-
-        Networking(baseURL: "http://localhost:3000").post("/movie/register_movie_by_date", parameterType: .formURLEncoded, parameters: ["queryDate":dateString(from: today)]) { (jr : JSONResult) in
-            switch(jr){
-            case .success(let response):
-                print(response)
-                break
-            case .failure(_):
-                break
-            }
-        }
+//        let today = Date()
+//
+//        Networking(baseURL: "http://localhost:3000").post("/movie/register_movie_by_date", parameterType: .formURLEncoded, parameters: ["queryDate":dateString(from: today)]) { (jr : JSONResult) in
+//            switch(jr){
+//            case .success(let response):
+//                print(response)
+//                break
+//            case .failure(_):
+//                break
+//            }
+//        }
         
     }
 
