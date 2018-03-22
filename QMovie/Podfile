@@ -7,4 +7,5 @@ pod 'BEMCheckBox', :git => 'https://github.com/Boris-Em/BEMCheckBox.git', :tag =
 pod 'NVActivityIndicatorView', :git => 'https://github.com/ninjaprox/NVActivityIndicatorView.git', :tag => 'v3.5'
 pod 'SnapKit', :git=>'https://github.com/SnapKit/SnapKit.git', :tag=> '4.0.0'
 pod 'SwiftyJSON', :git=>'https://github.com/SwiftyJSON/SwiftyJSON.git', :tag=> '4.0.0'
+pod 'SDWebImage', :git=>'https://github.com/rs/SDWebImage.git', :tag => '4.3.3'
 end

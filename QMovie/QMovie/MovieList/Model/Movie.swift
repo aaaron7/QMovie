@@ -11,7 +11,7 @@ import Foundation
 struct Movie : Codable{
     let objectId : String
     let category : String
-    let imbdId : String
+    let imdbId : String
     let director : String
     let name : String
     let poster : String

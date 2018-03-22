@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93644C3E205D169900EA9861 /* MovieListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93644C3D205D169900EA9861 /* MovieListViewCell.swift */; };
 		93C8113B2055145900DF3446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8113A2055145900DF3446 /* AppDelegate.swift */; };
 		93C8113D2055145900DF3446 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8113C2055145900DF3446 /* ViewController.swift */; };
 		93C811402055145900DF3446 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93C8113E2055145900DF3446 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		00339E85986B5B1DF5C2938D /* Pods-QMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-QMovie/Pods-QMovie.release.xcconfig"; sourceTree = "<group>"; };
+		93644C3D205D169900EA9861 /* MovieListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewCell.swift; sourceTree = "<group>"; };
 		93C811372055145900DF3446 /* QMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93C8113A2055145900DF3446 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93C8113C2055145900DF3446 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				93C811502055241900DF3446 /* MovieListView.swift */,
 				93C811522055249600DF3446 /* MovieDetailView.swift */,
 				93C81154205524B300DF3446 /* ScreenListView.swift */,
+				93644C3D205D169900EA9861 /* MovieListViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				93C8115F2055335100DF3446 /* MovieListService.swift in Sources */,
 				93C8116220565A4600DF3446 /* Utility.swift in Sources */,
 				93C811532055249600DF3446 /* MovieDetailView.swift in Sources */,
+				93644C3E205D169900EA9861 /* MovieListViewCell.swift in Sources */,
 				93C8115A20552F0100DF3446 /* RegisterMovie.swift in Sources */,
 				93C8114E205522AB00DF3446 /* MovieListViewController.swift in Sources */,
 				93C8115C20552F7B00DF3446 /* Screen.swift in Sources */,

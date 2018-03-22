@@ -20,4 +20,5 @@ struct RegisterMovie : Codable{
     let screenId : String
     let createdAt : String
     let updatedAt : String
+    var MovieInfo : Movie?
 }
