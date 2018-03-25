@@ -54,7 +54,7 @@ class MovieListViewController: UIViewController, MovieListViewDataSource{
         view.addSubview(movieListView)
         
         movieListView.snp.makeConstraints { (cm) in
-            cm.height.equalTo(240)
+            cm.height.equalTo(220)
             cm.top.width.equalTo(self.view)
         }
     }

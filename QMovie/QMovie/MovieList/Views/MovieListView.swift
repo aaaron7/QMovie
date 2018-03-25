@@ -39,6 +39,12 @@ class MovieListView: UIView{
         
         return layout
     }()
+    
+    lazy var separLine : UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.red
+        return view
+    }()
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -57,8 +63,15 @@ class MovieListView: UIView{
     
     func setupViews() -> Void {
         addSubview(contentView)
+        addSubview(separLine)
         contentView.snp.makeConstraints { (cm) in
             cm.edges.equalTo(self)
+        }
+        
+        separLine.snp.makeConstraints { (cm) in
+            cm.width.equalTo(self)
+            cm.height.equalTo(1)
+            cm.left.bottom.right.equalTo(self)
         }
         
         contentView.contentSize = CGSize(width: 1000, height: 100)
@@ -84,7 +97,7 @@ extension MovieListView : UICollectionViewDataSource, UICollectionViewDelegate, 
                 visibleCells[i].transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
             
-            cell?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+            cell?.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
         }
     }
     

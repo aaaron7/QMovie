@@ -40,7 +40,6 @@ class MovieListService{
                             return nil
                         }
                         return obj
-
                     }).flatMap {$0}
                 }
                 
