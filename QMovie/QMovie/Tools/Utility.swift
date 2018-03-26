@@ -15,6 +15,13 @@ func dateString(from fromDate : Date) -> String{
     return dateString
 }
 
+func dateString(from fromDate:Date, format : String) -> String{
+    let dateF = DateFormatter()
+    dateF.dateFormat = format
+    let dateString = dateF.string(from: fromDate)
+    return dateString
+}
+
 func utcStringDate(from : String)->Date{
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000Z"

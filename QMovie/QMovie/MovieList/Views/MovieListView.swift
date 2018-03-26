@@ -10,6 +10,7 @@ import UIKit
 
 protocol MovieListViewDataSource {
     func getMovies() -> [Movie]
+    func onSelectedMovie(m : Movie)
 }
 
 class MovieListView: UIView{
@@ -135,5 +136,10 @@ extension MovieListView : UICollectionViewDataSource, UICollectionViewDelegate, 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedIndexPath = indexPath
         updateTransform()
+        
+        if let delegate = dataSource{
+            dataSource?.onSelectedMovie(m: delegate.getMovies()[indexPath.item])
+        }
     }
+    
 }

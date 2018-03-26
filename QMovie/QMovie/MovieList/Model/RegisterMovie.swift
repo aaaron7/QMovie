@@ -11,7 +11,7 @@ import Foundation
 /*
  代表上映的电影，如每天上映的电影就应该是一条RegisterMovie的list
  */
-struct RegisterMovie : Codable{
+class RegisterMovie : Codable{
     let objectId : String
     let imdbId : String
     let beginTime : String
@@ -21,4 +21,15 @@ struct RegisterMovie : Codable{
     let createdAt : String
     let updatedAt : String
     var MovieInfo : Movie?
+    
+    lazy var originalBeginTime : Date = {
+        let date = utcStringDate(from: beginTime)
+        return date
+    }()
+    
+    func getCompactBeginTime()->String{
+        let result = dateString(from: self.originalBeginTime, format: "HH:mm")
+        return result
+    }
 }
+

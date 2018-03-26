@@ -11,6 +11,7 @@ import UIKit
 class MovieListViewController: UIViewController, MovieListViewDataSource{
     
     var registerMovies:[RegisterMovie] = []
+    var selectedImdbId : String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,10 +58,16 @@ class MovieListViewController: UIViewController, MovieListViewDataSource{
             cm.height.equalTo(220)
             cm.top.width.equalTo(self.view)
         }
+        
+        screenListView.snp.makeConstraints { (cm) in
+            cm.top.equalTo(movieListView.snp.bottom)
+            cm.left.bottom.right.equalTo(self.view)
+        }
     }
 
     lazy var screenListView : ScreenListView = {
-        let view = ScreenListView()
+        let view = ScreenListView(frame: CGRect.zero)
+        view.delegate = self
         return view
     }()
     
@@ -87,7 +94,13 @@ class MovieListViewController: UIViewController, MovieListViewDataSource{
     */
 }
 
-extension MovieListViewController{
+extension MovieListViewController:ScreenListViewDataSource{
+    func getScreenList() -> [RegisterMovie] {
+        return self.registerMovies.filter({ (rm) -> Bool in
+            rm.imdbId == selectedImdbId
+        })
+    }
+    
     func getMovies() -> [Movie] {
         return self.registerMovies.reduce([], { (accm , rm) -> [Movie] in
             let movieExists = accm.filter({$0.imdbId == rm.imdbId}).count > 0
@@ -98,5 +111,10 @@ extension MovieListViewController{
             
             return newAcc
         })
+    }
+    
+    func onSelectedMovie(m: Movie) {
+        selectedImdbId = m.imdbId
+        screenListView.reload()
     }
 }

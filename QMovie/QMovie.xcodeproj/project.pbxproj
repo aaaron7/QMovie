@@ -22,6 +22,7 @@
 		93C8115C20552F7B00DF3446 /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8115B20552F7B00DF3446 /* Screen.swift */; };
 		93C8115F2055335100DF3446 /* MovieListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8115E2055335100DF3446 /* MovieListService.swift */; };
 		93C8116220565A4600DF3446 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C8116120565A4600DF3446 /* Utility.swift */; };
+		93C9974220675F8000A3D1EE /* ScreenListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C9974120675F8000A3D1EE /* ScreenListCell.swift */; };
 		F6459F527120C21756EF5CB8 /* Pods_QMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1B29A373DD2A457DF905544 /* Pods_QMovie.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		93C8115B20552F7B00DF3446 /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		93C8115E2055335100DF3446 /* MovieListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListService.swift; sourceTree = "<group>"; };
 		93C8116120565A4600DF3446 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		93C9974120675F8000A3D1EE /* ScreenListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenListCell.swift; sourceTree = "<group>"; };
 		A2E97A13DD716758E2BBB82E /* Pods-QMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QMovie/Pods-QMovie.debug.xcconfig"; sourceTree = "<group>"; };
 		F1B29A373DD2A457DF905544 /* Pods_QMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				93C811522055249600DF3446 /* MovieDetailView.swift */,
 				93C81154205524B300DF3446 /* ScreenListView.swift */,
 				93644C3D205D169900EA9861 /* MovieListViewCell.swift */,
+				93C9974120675F8000A3D1EE /* ScreenListCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				93C8115C20552F7B00DF3446 /* Screen.swift in Sources */,
 				93C811512055241900DF3446 /* MovieListView.swift in Sources */,
 				93C8113D2055145900DF3446 /* ViewController.swift in Sources */,
+				93C9974220675F8000A3D1EE /* ScreenListCell.swift in Sources */,
 				93C8113B2055145900DF3446 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
